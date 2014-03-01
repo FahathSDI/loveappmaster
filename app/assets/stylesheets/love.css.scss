@@ -1,0 +1,151 @@
+// Place all the styles related to the love controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+  margin:0;
+  padding:0;
+  font: 14px Comic Sans MS;
+  color:#fff;
+  background: url('heart_back.png') no-repeat  ;
+  background-position: 100px 80px;
+  
+}
+
+#container {
+    float: right;
+  overflow: hidden;
+  margin-right: 150px;
+  width: 522px;
+  margin: 0 auto;
+}
+#main_form
+{
+  float: left;
+  overflow: hidden;
+  width: 522px;
+  margin: 0 auto;
+}
+#in { 
+  overflow: hidden;
+}
+
+a { color: #000; }
+
+div.l {
+  float: left;
+  margin: 20px 80px 0 40px;
+  background:none;
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
+
+canvas { display: block; }
+input:required:invalid, input:focus:invalid
+{
+    background-image: url(images/invalid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+input:required:valid
+{
+    background-image: url(images/valid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+label
+{
+width: 140px;
+padding-left: 50px;
+
+float: left;
+text-align: left;
+}
+input, textarea, select
+{
+margin: 5px;
+padding: 0px;
+
+
+}
+form{
+    margin-top: 105px;
+    margin-left: 450px;
+  
+}
+
+.answer{
+    font-size: 16px;
+    color: black;
+    margin-left: 300px;
+    background-color: #fff;
+  
+}
+.button{
+    padding:3px;
+background-color:#fffff;
+border:2px solid #dbdbdb;
+color: #A020F0  ;
+font-weight:bold;
+font-style:italic;
+margin-left: 197px;
+
+border-radius: 20px 0 20px 0;
+}
+.button:hover{
+background-color:#fffff;
+border:2px solid #dbdbdb;
+padding:5px;
+color: red  ;
+font-weight:bold;
+font-style:normal;
+margin-left: 197px;
+}
+#heartblink{
+   float: right;
+    height: 160px;
+    margin-right: 200px;
+    width: 180px;
+}
+#equationblink{
+    float: right;
+    height: 160px;
+   margin-top: 40px;
+    width: 180px;
+}
+#signpng{
+       float: right;
+    height: 150px;
+    margin-right: -340px;
+    margin-top: -230px;
+    width: 480px;
+}
+
+.button_example{
+    padding:3px;
+background-color:#fffff;
+border:2px solid #dbdbdb;
+color: #A020F0  ;
+font-weight:bold;
+font-style:italic;
+ float: left;
+    margin-top: 500px;
+    margin-left: 40px;
+
+border-radius: 20px 0 20px 0;
+}
+.button_example:hover{
+background-color:#fffff;
+border:2px solid #dbdbdb;
+padding:5px;
+color: red  ;
+font-weight:bold;
+font-style:normal;
+ float: left;
+    margin-top: 500px;
+    margin-left: 40px;
+    
+}
+

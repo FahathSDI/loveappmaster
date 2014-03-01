@@ -1,0 +1,126 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Love Meter</title>
+<head>
+
+</head>	
+<body>
+<div id="container">
+<div id="in"></div>
+
+</div>
+<p style='margin-left: 260px;' ><%= (image_tag("logo.png")) %></p>
+
+
+<form class="formStyle" action="/love/show"  enctype="multipart/form-data">
+<label>Your Name</label><input type="text" name="name1" required>
+<br />
+<label>Crushes Name</label><input type="text" name="name2" required>
+<br /> 
+<label>Female Zodiac</label>
+<input list="sign1" name="sign1" required>
+    <datalist id="sign1">
+	    <option value=""></option>
+	    <option value="Aries">Aries</option>
+	     <option value="Taurus">Taurus</option>
+	      <option value="Gemini">Gemini</option>
+	       <option value="Cancer">Cancer</option>
+	        <option value="Leo">Leo</option>
+		 <option value="Virgo">Virgo</option>
+		  <option value="Libra">Libra</option>
+		   <option value="Scorpio">Scorpio</option>
+		    <option value="Sagittarius">Sagittarius</option>
+		     <option value="Capricorn">Capricorn</option>
+		      <option value="Aquarius">Aquarius</option>
+		       <option value="Pisces">Pisces</option>
+	</datalist>
+<br />
+<label>Male Zodiac</label>
+<input list="sign2" name="sign2" required>
+        <datalist id="sign2">
+	   <option value=""></option>
+	    <option value="Aries">Aries</option>
+	     <option value="Taurus">Taurus</option>
+	      <option value="Gemini">Gemini</option>
+	       <option value="Cancer">Cancer</option>
+	        <option value="Leo">Leo</option>
+		 <option value="Virgo">Virgo</option>
+		  <option value="Libra">Libra</option>
+		   <option value="Scorpio">Scorpio</option>
+		    <option value="Sagittarius">Sagittarius</option>
+		     <option value="Capricorn">Capricorn</option>
+		      <option value="Aquarius">Aquarius</option>
+		       <option value="Pisces">Pisces</option>
+	</datalist>
+<br />
+<input type="submit" class="button" value="Check It" name="submit">
+</form>
+<%= (image_tag("heart.gif",:id => 'heartblink')) %>
+<%= (image_tag("ram.png",:id => 'signpng')) %>
+
+<% if params[:app].present? %>
+
+	<div class='answer'>
+       Best Match, There's almost definiatley love there! Go ahead. Your not gonna be heartbroken.
+	</div>
+
+<% end %>
+
+<script>
+
+var loaders = [
+
+	{
+
+		width: 100,
+		height: 90,
+		padding: 10,
+
+		stepsPerFrame: 2,
+		trailLength: 1,
+		pointDistance: .02,
+
+		strokeColor: '#A020F0',
+		
+		step: 'fader',
+
+		multiplier: 2,
+
+		setup: function() {
+			this._.lineWidth = 5;
+		},
+
+		path: [
+		
+			['arc', 10, 10, 10, -270, -90],
+			['bezier', 10, 0, 40, 20, 20, 0, 30, 20],
+			['arc', 40, 10, 10, 90, -90],
+			['bezier', 40, 0, 10, 20, 30, 0, 20, 20]
+		]
+	},
+];
+
+var d, a, container = document.getElementById('in');
+
+
+for (var i = -1, l = loaders.length; ++i < l;) {
+	
+	d = document.createElement('div');
+	d.className = 'l';
+
+	a = new Sonic(loaders[i]);
+
+	d.appendChild(a.canvas);
+	container.appendChild(d);
+
+	a.canvas.style.marginTop = (150 - a.fullHeight) / 2 + 'px';
+	a.canvas.style.marginLeft = (150 - a.fullWidth) / 2 + 'px';
+
+	a.play();
+
+}
+
+</script>
+
+</body>
+
